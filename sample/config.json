@@ -1,0 +1,21 @@
+{
+    "db":{
+        "mysql":{
+            "debug":{
+               "host": "localhost",
+               "user": "root",
+               "database": "somedb",
+               "password": ""
+            },
+            "release":{
+               "host": "someserver",
+               "user": "someuser",
+               "database": "somedb",
+               "password": "somepass"
+            }
+        },
+        "other":{
+            "key": "value"
+        }
+    }
+}
