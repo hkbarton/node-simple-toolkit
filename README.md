@@ -6,27 +6,27 @@ Currently only 2 components in this toolkit, and I will update once I get new or
 
 Write your JSON config file like below and save it as config.json
 
-{
-    "db":{
-        "mysql":{
-            "debug":{
-               "host": "localhost",
-               "user": "root",
-               "database": "somedb",
-               "password": ""
+    {
+        "db":{
+            "mysql":{
+                "debug":{
+                   "host": "localhost",
+                   "user": "root",
+                   "database": "somedb",
+                   "password": ""
+                },
+                "release":{
+                   "host": "someserver",
+                   "user": "someuser",
+                   "database": "somedb",
+                   "password": "somepass"
+                }
             },
-            "release":{
-               "host": "someserver",
-               "user": "someuser",
-               "database": "somedb",
-               "password": "somepass"
+            "other":{
+                "key": "value"
             }
-        },
-        "other":{
-            "key": "value"
         }
     }
-}
 
 Write a simple text file which indicate the current environment, there is only one word in this file, "debug" or "release". Then you can read configuration according to current environment setting like this:
 
@@ -38,11 +38,11 @@ console.log(config.db.mysql.host);
 
 Very simple:
 
-var log = reuqire('log.js');
-log.i('...'); // log information
-log.w('...'); // log warning
-log.e('...'); // log error
-log.d('...'); // log debug
+    var log = reuqire('log.js');
+    log.i('...'); // log information
+    log.w('...'); // log warning
+    log.e('...'); // log error
+    log.d('...'); // log debug
 
 Log file will be generated in log directory, and it will rolling automatic once the file size is greater than 10mb, archieve log file will be names as log.x which x is a integer, such as log.1, file called 'log' is current, latest log file.
 
