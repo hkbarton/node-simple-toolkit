@@ -30,8 +30,8 @@ Write your JSON config file like below and save it as config.json
 
 Write a simple text file which indicate the current environment, there is only one word in this file, "debug" or "release". Then you can read configuration according to current environment setting like this:
 
-var config = require('config.js');
-console.log(config.db.mysql.host);
+    var config = require('config.js');
+    console.log(config.db.mysql.host);
 
 
 ## Log utility
